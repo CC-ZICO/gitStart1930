@@ -25,6 +25,8 @@ ul {
 .header {
     min-height: 100vh;
     background: cornflowerblue;
+    display: flex;
+    flex-direction: column;
 }
 
 .header__nav {
@@ -51,6 +53,33 @@ ul {
 .header__link {
     font-size: 24px;
     color: #fff;
+}
+
+.header__content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.header__title {
+    /* font-size: 75px; */
+    font-size: calc(50px + 25 * (100vw / 1920));
+}
+
+.header__txt {
+    font-size: 28px;
+}
+
+@media (max-width: 767px) {
+    .header__title {
+        font-size: calc(50px + (25 + 25 * 0.7) * ((100vw - 320px) / 1920));
+    }
+    
+    .header__list {
+        display: none;
+    }
 }
 
 /* header end */
